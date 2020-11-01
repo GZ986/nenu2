@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <script type="text/javascript">
+	window.onload = function(){
+		//获取登录按钮并给它绑定单击响应函数
+		var submitBtnEle = document.getElementById("submitBtn");
+		submitBtn.onclick = function(){
+			//获取用户输入的用户名
+			var userInputEle = document.getElementById("username");
+			var userText = userInputEle.value;
+			//获取用户输入的密码
+			var pwdInputEle = document.getElementById("password");
+			var pwdText = pwdInputEle.value;
+			//获取用户输入的密码
+			var pwdInputEle = document.getElementById("password");
+			var pwdText = pwdInputEle.value;			
+			if(userText == ""){
+				alert("用户名不能为空！");
+				//取消跳转的默认行为
+				return false;
+			}
+			if(pwdText == ""){
+				alert("密码不能为空！");
+				return false;
+			}
+			
+		};
+	  };
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <title>账号注册</title>
+</head>
+<body>
+<div align="center">
+  
+    <h1>账号注册</h1>
+    <img alt="" src="../img/logo.gif" />
+       <form action="../register" method = "post">
+        <table align="center">
+            <tr>
+                <td><label for="username">用户名：</label></td>
+                <td><input type="text" id="username" name="username" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="password">密码：</label></td>
+                <td><input type="password" id="password" name="password" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="repassword">确认密码：</label></td>
+                <td><input type="password" id="repassword" name="repassword" value=""></td>
+            </tr>
+             <tr>
+                <td><label for="email">电子邮箱：</label></td>
+                <td><input type="text" id="email" name="email" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="submitBtn" value="注册"></td>
+            </tr>
+        </table>
+     </form>
+     <br/>
+     <a href="../index.jsp">回首页</a>
+</div>
+</body>
+</html>
